@@ -1,0 +1,7 @@
+name: tailscale
+version: 0.1.0
+source: https://github.com/johnbellone/salt-tailscale
+
+dependencies:
+  - name: linux
+    source: https://github.com/salt-formulas/salt-formula-linux

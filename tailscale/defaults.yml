@@ -1,0 +1,5 @@
+tailscale:
+  version: 0.98.0
+  package:
+    yum_baseurl: https://pkgs.tailscale.com/unstable/centos/7/$basearch
+    yum_gpgkey: https://pkgs.tailscale.com/unstable/centos/7/repo.gpg

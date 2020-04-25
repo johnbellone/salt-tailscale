@@ -1,0 +1,3 @@
+{%- import_yaml "tailscale/defaults.yml" as default_settings %}
+{% set defaults = salt['grains.filter_by'](default_settings, default='tailscale', merge=salt['pillar.get']('tailscale:lookup', default={})) %}
+{% set tailscale = salt['config.get']('tailscale', default=defaults, merge=True) %}

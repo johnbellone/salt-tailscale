@@ -1,0 +1,25 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: salt_solo
+  log_level: error
+  formula: tailscale
+  require_chef: false
+  dependencies:
+    - name: linux
+      source: https://github.com/salt-formulas/salt-formula-linux.git
+  state_top:
+    base:
+      "*":
+        - tailscale
+
+verifier:
+  name: inspec
+
+platforms:
+  - name: centos-8.1
+  - name: centos-7.7
+
+suites:
+  - name: default
